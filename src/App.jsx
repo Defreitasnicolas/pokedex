@@ -1,5 +1,4 @@
 import PokemonCard from "./components/PokemonCard";
-
 function Card() {
   return (
     <div>
