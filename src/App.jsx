@@ -15,9 +15,7 @@ function Card() {
     <div>
       <PokemonCard pokemon={pokemonList[0]} />
     </div>
-  )
+  );
 }
 
 export default Card;
-
-
