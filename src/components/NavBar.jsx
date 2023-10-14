@@ -1,20 +1,11 @@
-const NavBar = ({ pokemonIndex, setPokemonIndex, pokemonList }) => {
+const NavBar = ({ pokemonList, setPokemonIndex }) => {
   return (
     <div>
-      {pokemonIndex > 0 ? (
-        <button onClick={() => setPokemonIndex(pokemonIndex - 1)}>
-          Precedent
+      {pokemonList.map((pokemon, index) => (
+        <button onClick={() => setPokemonIndex(index)} key={pokemon.name}>
+          {pokemon.name}
         </button>
-      ) : (
-        ""
-      )}
-      {pokemonIndex < pokemonList.length - 1 ? (
-        <button onClick={() => setPokemonIndex(pokemonIndex + 1)}>
-          suivant
-        </button>
-      ) : (
-        ""
-      )}
+      ))}
     </div>
   );
 };
